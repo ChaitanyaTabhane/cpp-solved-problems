@@ -3,12 +3,13 @@
 using namespace std;
 int main() {
     // Write C++ code here
-    int arr1[3]={3,6,7};
-    int arr2[4]={2,4,8,9};
+    int m= 3, n=4;
+    int arr1[m]={3,6,7};
+    int arr2[n]={2,4,8,9};
     
     vector<int> ans;
     int i=0,j=0;
-    while(i<3 && j<4){
+    while(i<m && j<n){
         if(arr1[i]<arr2[j]){
             ans.push_back(arr1[i++]);
         }
@@ -16,12 +17,13 @@ int main() {
             ans.push_back(arr2[j++]);
         }
     }
-    
-    while(i<3){
+    //Bache huye 1st array ke element (Kyu ki 1st arra bada ho sakta hai)
+    while(i<m){
         ans.push_back(arr1[i++]);
     }
     
-    while(j<4){
+    // Bache huye 2nd array ke elements (Kyu ki 2nd aray bada ho sakta hai)
+    while(j<n){
             ans.push_back(arr2[j++]);
     }
     
